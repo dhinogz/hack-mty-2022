@@ -7,7 +7,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: ./scripts/docker-entrypoint.sh
+    command: python server.py
     volumes:
     - ./app:/usr/src/app
     ports:

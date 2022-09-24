@@ -14,9 +14,11 @@ RUN apt-get update \
     && apt-get clean
 
 # install python dependencies
-COPY requirements.txt
+COPY requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
+
+# RUN chown -R root .
 
 # add app
 COPY ../app/ .
