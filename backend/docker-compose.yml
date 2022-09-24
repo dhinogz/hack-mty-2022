@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+
+  web:
+    container_name: hackmty_backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ./scripts/docker-entrypoint.sh
+    volumes:
+    - ./app:/usr/src/app
+    ports:
+    - 8000:8000
+    depends_on:
+    - db
+
+  db:
+    container_name: hackmty_db
+    image: postgres:13.4
+    expose:
+    - 5432
+    environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=postgres
+    - POSTGRES_DB=db
