@@ -25,9 +25,6 @@ body{
 
 }
 
-
-
-
 /* The navigation bar */
 .navbar {
   overflow: hidden;
@@ -78,30 +75,102 @@ border-color: #c00000;*/
 
 }
 
-.tablink {
-  background-color: #ffffff;
-  color: black;
+
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: inherit;
   float: left;
   border: none;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  font-size: 17px;
+  transition: 0.3s;
   width: 50%;
 }
 
-.tablink:hover {
-  background-color: #ca5262;
+.tab button:hover {
+  background-color: #ea0b2a;
   color: white;
 }
 
-.tabcontent {
-  color: black;
-  display: none;
-  padding: 100px 20px;
-  border: 1px solid #ea0b2a;
-  height: 100%;
+.tab button.active {
+  background-color: #ea0b2a;
+  color: white;
 }
 
-#PorCumplir {background-color: #ea0b2a;}
-#Cumplido {background-color: #ea0b2a;}
+.card{
+  width: 100%;
+  height: auto;
+}
+
+/* CARDS */
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+.logro {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	margin: 20px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.logro h6 {
+	opacity: 0.6;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.logro h2 {
+	letter-spacing: 1px;
+	margin: 10px 0;
+}
+
+.logro-preview {
+	background-color: #2A265F;
+	color: #fff;
+	padding: 30px;
+	max-width: 250px;
+}
+
+.logro-preview a {
+	color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	opacity: 0.6;
+	margin-top: 30px;
+	text-decoration: none;
+}
+
+.logro-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
+}
+
+.btn {
+	background-color: #2A265F;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	letter-spacing: 1px;
+}
