@@ -19,3 +19,20 @@ class BalanceInUserRead(BalanceBase):
 
 class BalanceCreate(BalanceBase):
     user_id: int
+
+
+class TransactionBase(CoreModel):
+
+    description: str
+    quantity: int
+
+class TransactionCreate(TransactionBase):
+
+    user_id: int
+
+class TransactionRead(TransactionBase):
+
+    user_id: int
+
+    class Config:
+        orm_mode = True
