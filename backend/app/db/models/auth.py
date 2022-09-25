@@ -1,42 +1,33 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
-
+from sqlalchemy.orm import relationship
+from db.db import Base
 
 from .core import CoreBaseModel
 
 
-class Auth(CoreBaseModel):
+
+class User(CoreBaseModel, Base):
     """Auth database model linking to different profiles"""
-    __tablename__ = "auth"
+    __tablename__ = "user"
 
     email = Column(String, nullable=False)
-    hash_password = Column(String, nullable=False)
-
-class Child(CoreBaseModel):
-    """Child user profile"""
-
-    __tablename__ = "child"
+    password = Column(String, nullable=False)
 
     name = Column(String, nullable=False)
-    birthday = Column(Integer, nullable=False)
+    parent_name = Column(String)
 
-    auth_id = Column(Integer, ForeignKey("auth.id"))
-    father_id = Column(Integer, ForeignKey("parent.id"))
-    mother_id = Column(Integer, ForeignKey("parent.id"))
+    # balance = relationship("Balance")
 
+# class Child(CoreBaseModel, Base):
+#     """Child user profile"""
 
-class ParentsChildren(CoreBaseModel):
+#     __tablename__ = "child"
 
-    __tablename__ = "parents_child"
+#     name = Column(String, nullable=False)
+#     birthday = Column(Integer, nullable=False)
 
-    child_id = Column(Integer, ForeignKey("child.id"))
-    parent_id = Column(Integer, ForeignKey("parent.id"))
+#     auth_id = Column(Integer, ForeignKey("user.id"))
+#     parent_name = Column(String)
 
-
-class Parent(CoreBaseModel):
-    """Parent user profile"""
-    __tablename__ = "parent"
-
-    name = Column(String, nullable=False)
-    auth_id = Column(Integer, ForeignKey("auth.id"))
 
     

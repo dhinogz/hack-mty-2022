@@ -1,35 +1,22 @@
 from datetime import datetime
 
 from sqlalchemy import Integer, Column, DateTime, Boolean
+from sqlalchemy.sql import func
 
 from db.db import Base
 
 
 class IDMixin(object):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
 
 
 class TimeStampMixin(object):
 
-    created_at = Column(
-        DateTime,
-        server_default=datetime.utcnow,
-        nullable=False,
-    )
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
 
-    updated_at = Column(
-        DateTime,
-        server_default=datetime.utcnow,
-        nullable=False,
-    )
-
-    active = Column(
-        Boolean,
-        server_default=True,
-        # default=True,
-        nullable=False,
-    )
+    is_active = Column(Boolean, unique=False, default=True)
 
 
-class CoreBaseModel(IDMixin, TimeStampMixin, Base):
+class CoreBaseModel(IDMixin, TimeStampMixin):
     pass

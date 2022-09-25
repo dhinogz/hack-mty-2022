@@ -13,6 +13,11 @@ class Settings(BaseSettings):
     HOST: str = "0.0.0.0"
     PORT: int = 8000
     BASE_URL_: str = f"https://{HOST}:{PORT}"
+    SECRET_KEY: str
+    ALGORITHM: str
+    ACCESS_TOKEN_EXPIRE_MINUTES: int
+    JWT_AUDIENCE: str = "hackmty:auth"
+
     # quantity of workers for uvicorn
     WORKERS_COUNT: int = 1
     # Enable uvicorn reloading
