@@ -8,6 +8,7 @@ python-jose==3.3.0
 passlib==1.7.4
 bcrypt==4.0.0
 typer[all]
+python-multipart
 psycopg2-binary==2.9.3
 factory-boy==3.2.1
 Faker==13.14.0

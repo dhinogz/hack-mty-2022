@@ -1,8 +1,0 @@
-function addGasto(){
-    
-}
-
-
-function addIngreso(){
-
-}
