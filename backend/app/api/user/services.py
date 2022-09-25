@@ -28,3 +28,17 @@ def create(*, db_session: Session, user_in: UserCreate):
     return user
 
 
+def login(*, db_session: Session, user_in: UserCreate):
+
+    user = db_session.query(User).where(User.email==user_in.email).one_or_none()
+    if not user:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="User with that email does not exist."
+        )
+    if user.password != user_in.password:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Unsuccesful login" 
+        )
+    return user
