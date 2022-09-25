@@ -58,13 +58,14 @@ body{
 
 /* Main content */
 .main {
-  margin-top: 00px; /* Add a top margin to avoid content overlay */
+  margin-top: 10px; /* Add a top margin to avoid content overlay */
 }
 
 /* agregar gasto 
 color: #e66c6c;
 border-color: #c00000;*/
 .gasto{
+
   box-sizing: border-box;
   color: white;
   align-items: center;
@@ -73,12 +74,6 @@ border-color: #c00000;*/
   box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
   border-radius: 5px;
   width: 100%;
+  background-color: #ea0b2a;
 
-}
-/* agregar ingreso */
-.ingreso{
-  text-shadow: 2px 2px;
-  color: #C5E0B4;
-  border-color: #385723;
-  
 }
