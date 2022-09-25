@@ -21,10 +21,11 @@ function sendVal(){
     var descripcion = document.getElementById("Descripcion").value;
     var fecha = "2019-01-01";
     
-    mov = mov +[descripcion, fecha, dinero];
+    var movimientos = JSON.parse(mov);
+    movimientos = movimientos + "," + [descripcion, fecha, (-1)*dinero];
     bal = parseInt(bal,10) + parseInt(dinero,10);
     localStorage.setItem('bal', bal);
-    localStorage.setItem('mov',mov);
+    localStorage.setItem('mov', JSON.stringify(movimientos));
 
 
 

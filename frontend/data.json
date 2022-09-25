@@ -13,7 +13,7 @@
     {"Usuario":"juan",
     "password":"54321",
     "Movimientos":[
-        {"descripcion":"Cumple","fecha":"2022-01-01", "monto": "1200"},
+        {"descripcion":"Cumpleaños","fecha":"2022-01-01", "monto": "1200"},
         {"descripcion":"abuela ","fecha":"2022-01-01", "monto": "1500"},
         {"descripcion":"VideoJuego","fecha":"2022-05-01", "monto": "-520"}],
     "Objetivos":[
