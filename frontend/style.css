@@ -39,8 +39,8 @@ body{
   height: 90px;
    /* Position the navbar at the top of the page */
   width: 75%; /* Full width */
-  z-index: 999;
-  
+
+  z-index: 100;
 }
 
 /* Links inside the navbar */
@@ -57,6 +57,7 @@ body{
 .navbar a:hover {
   background: #ddd;
   color: black;
+  z-index: 1;
 }
 
 /* Main content */
