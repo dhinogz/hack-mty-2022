@@ -1,4 +1,4 @@
-//import perfil from '/.claseUsuario.js';
+//import {perfil} from '/.claseUsuario.js';
 const form = document.getElementById('form');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
@@ -13,7 +13,31 @@ fetch('./data.json')
 .then((response) => data = response.json())
 .then((json) => data = json);
 
+class perfil {
+    constructor(usuario) {
+        this.usuario = usuario;
+        this.balance = 0;
+        this.Movimientos = [];
+        this.Objetivos = [];
+    }
+    addMovimiento(descripcion,fecha,monto) {
+        this.Movimientos.push([descripcion,fecha,monto]);
+        this.balance=this.balance+monto;
+    }
+    addObjetivo(descripcion,fecha,monto) {
+        this.Objetivos.push([descripcion,fecha,monto]);
+    }
+    getBalance() {
+        return this.balance;
+    }
+    getMovimientos() {
+        return this.Movimientos;
+    }
+    getObjetivos() {
+        return this.Objetivos;
+    }
 
+}
 
 
 
@@ -73,8 +97,22 @@ function validarEntradas(){
 
         if(email_correcto && pass_correcto)
         {
+            usuario = new perfil(r.Usuario);
+    
+            for (let m of r.Movimientos){
+                usuario.addMovimiento(m.descripcion,m.fecha,parseInt(m.monto,10));
+                console.log(m.monto);
+            }
+            for (let o of r.Objetivos){
+                usuario.addObjetivo(o.descripcion,o.fecha,o.monto);
+            }
+    
+            console.log(usuario.getBalance());
 
-            localStorage.setItem('Username', r.Usuario);
+            localStorage.setItem('User', r.Usuario);
+            localStorage.setItem('bal', usuario.getBalance());
+            localStorage.setItem('mov', JSON.stringify(usuario.getMovimientos()));
+            localStorage.setItem('obj', JSON.stringify(usuario.getObjetivos()));
 
             window.location.href = "home.html";
         }
