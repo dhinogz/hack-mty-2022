@@ -39,6 +39,8 @@ body{
   height: 90px;
    /* Position the navbar at the top of the page */
   width: 75%; /* Full width */
+  z-index: 999;
+  
 }
 
 /* Links inside the navbar */
