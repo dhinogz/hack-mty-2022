@@ -122,16 +122,25 @@ border-color: #c00000;*/
 	border-radius: 10px;
 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 	display: flex;
-	margin: 20px;
+	margin: 15px;
 	overflow: hidden;
 	width: 100%;
 }
 
-.logro h6 {
-	opacity: 0.6;
-	margin: 0;
+.logro h4 {
+	margin: 10;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+  color: white;
+}
+
+.logro h5 {
+  opacity: 0.5;
+	margin: 10;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+  color: black;
+  
 }
 
 .logro h2 {
@@ -139,11 +148,32 @@ border-color: #c00000;*/
 	margin: 10px 0;
 }
 
-.logro-preview {
-	background-color: #2A265F;
+.logro-preview-rosa {
+	background-color: #FF99CC;
 	color: #fff;
-	padding: 30px;
-	max-width: 250px;
+	padding: 40px;
+  width: 300px;
+}
+
+.logro-preview-azul {
+	background-color: #99CCFF;
+	color: #fff;
+	padding: 40px;
+  width: 300px;
+}
+
+.logro-preview-amarillo {
+	background-color: #f5e753;
+	color: #fff;
+	padding: 40px;
+  width: 300px;
+}
+
+.logro-preview-verde {
+	background-color: #b1df95;
+	color: #fff;
+	padding: 40px;
+  width: 300px;
 }
 
 .logro-preview a {
@@ -161,16 +191,92 @@ border-color: #c00000;*/
 	width: 100%;
 }
 
-.btn {
-	background-color: #2A265F;
-	border: 0;
-	border-radius: 50px;
+.reto-del-mes{
+  background-color: #E66C6C;
+	border-radius: 10px;
 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	margin: 15px;
+	overflow: hidden;
+	width: 95%;
+  color: #ffffff
+}
+
+.reto-del-mes-preview {
 	color: #fff;
-	font-size: 16px;
-	padding: 12px 25px;
-	position: absolute;
-	bottom: 30px;
-	right: 30px;
+	padding: 50px;
+  width: 400px;
+}
+
+.reto-del-mes-preview a {
+	color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	opacity: 0.6;
+	margin-top: 30px;
+	text-decoration: none;
+}
+
+.reto-del-mes-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
+}
+
+.reto-del-mes h4 {
+	margin: 10;
 	letter-spacing: 1px;
+	text-transform: uppercase;
+  color: white;
+  font-size: xx-large;
+}
+
+.reto-del-mes h2 {
+	letter-spacing: 1px;
+	margin: 10px 10px;
+  font-size: xx-large;
+}
+
+.reto {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	margin: 15px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.reto h4 {
+	margin: 10;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+  color: white;
+}
+
+.reto h5 {
+  opacity: 0.5;
+	margin: 10;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+  color: black;
+  
+}
+
+.reto h2 {
+	letter-spacing: 1px;
+	margin: 10px 0;
+}
+
+.reto-preview {
+	background-color: #E66C6C;
+	color: #fff;
+	padding: 40px;
+  width: 300px;
+}
+
+.reto-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
 }
