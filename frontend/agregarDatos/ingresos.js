@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var button = document.getElementById('submit');
     button.onclick = function() {
         //sendVal();
-        console.log("Ingresos");
+        console.log("Ingresos...");
         window.location.href = "../home.html";
     // …
     };
