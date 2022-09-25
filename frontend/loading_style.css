@@ -1,0 +1,71 @@
+html{
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-size:large;
+    color: #ffffff;
+    background-color: #EA0B2A;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .h2{
+    font-size:large;
+    color: #ffffff;
+    font: Arial;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  lapiz{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    animation: drawAndEraseAnimation 4s linear infinite;
+  
+  }
+  
+  lapiz::before{
+    content:"";
+    position: absolute;
+    width: 432px;
+    height: 432px;
+    border-radius: 50%;
+    border: 8px solid;
+    border-color: rgb(61, 18, 18) rgb(61, 18, 18) transparent transparent;
+    transform: rotate(45deg);
+  }
+  
+  lapiz::after{
+    content: "";
+    width: 83.2px;
+    height: 459.2px;
+    position: absolute;
+    left: calc(50%-2.7em);
+    border-radius: 16px 16px 0 0;
+    background-repeat: no-repeat;
+    background-image: 
+      linear-gradient(to top, #fc6c85 100%, transparent 0),
+      linear-gradient(to top, #c0c0c0 100%, transparent 0),
+      linear-gradient(to right, #c5c5c5 33.33%, #e6e6e6 0, #e6e6e6 66.66%,  #ffffff 0),
+      linear-gradient(73.5deg, #EA0B2A 13.1%, #d2b48c 14.1%, #d2b48c 28%, transparent 29%),
+      linear-gradient(-73.2deg, #EA0B2A 13.1%, #d2b48c 14.1%, #d2b48c 28%, transparent 29%),
+      linear-gradient(#d2b48c 100%, transparent 0),
+      linear-gradient(73.5deg, transparent 13.1%, #000000 14.1%, #000000 28%, transparent 29%),
+      linear-gradient(-73.2deg, transparent 13.1%, #000000 14.1%, #000000 28%, transparent 29%);
+  
+    background-size:100% 12.5%, 100% 14%, 100% 56.3%, 100% 76.3%, 100% 76.3%, 42% 66.3%, 26.9% 98%, 26.9% 98%;
+    background-position: 0 0, 0 14%, 0 30%, 0 50%, 0 50%, 50% 50%, 33% 28%, 66% 28%;
+  }
+  
+  @keyframes drawAndEraseAnimation {
+    100%{
+      transform: rotate(360deg);
+    }
+  }
