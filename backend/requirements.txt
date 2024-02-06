@@ -1,4 +1,4 @@
-fastapi==0.79.0
+fastapi==0.109.1
 uvicorn[standard]==0.17.6
 ujson==5.4.0
 python-dotenv==0.20.0
